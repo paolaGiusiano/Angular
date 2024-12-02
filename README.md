@@ -7,6 +7,7 @@ Define opciones como el estándar de JavaScript a usar (ES2020), rutas de import
 Este archivo es extendido por otros archivos tsconfig específicos (como tsconfig.app.json y tsconfig.spec.json).
 
 *tsconfig.app.json*
+
 Propósito: Configuración de TypeScript específica para la aplicación principal.
 
 Es una extensión de tsconfig.json y se utiliza exclusivamente para el código fuente del proyecto (excluyendo pruebas o configuraciones del servidor).
