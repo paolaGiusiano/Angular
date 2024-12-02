@@ -64,6 +64,7 @@ Se encarga de "bootstrapping" (inicializar) la aplicación Angular en un entorno
 
 
 #*Relación entre archivos*
+
 Los archivos tsconfig.*.json definen configuraciones específicas para diferentes partes del proyecto.
 angular.json es la configuración principal para Angular CLI.
 server.ts y main.server.ts son relevantes solo si usas Angular Universal para SSR.
