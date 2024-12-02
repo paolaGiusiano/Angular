@@ -1,30 +1,36 @@
 # Angular
 
 *tsconfig.json*
+
 Propósito: Configuración general para TypeScript en todo el proyecto.
 Define opciones como el estándar de JavaScript a usar (ES2020), rutas de importación, y configuración base para TypeScript.
 Este archivo es extendido por otros archivos tsconfig específicos (como tsconfig.app.json y tsconfig.spec.json).
 *tsconfig.app.json*
 
 Propósito: Configuración de TypeScript específica para la aplicación principal.
+
 Es una extensión de tsconfig.json y se utiliza exclusivamente para el código fuente del proyecto (excluyendo pruebas o configuraciones del servidor).
 Define qué archivos y carpetas deben ser incluidos/excluidos al compilar la aplicación.
 
 *tsconfig.spec.json*
 
 Propósito: Configuración de TypeScript para pruebas unitarias.
+
 Similar a tsconfig.app.json, pero específico para los archivos de prueba (normalmente terminan en .spec.ts).
 Incluye configuraciones adicionales necesarias para usar herramientas de testing como Jasmine o Karma.
 
 *package.json*
 
 Propósito: Archivo de configuración de npm que lista las dependencias del proyecto.
-Contiene:
-Dependencias necesarias para ejecutar la aplicación (dependencies).
+
+Contiene:Dependencias necesarias para ejecutar la aplicación (dependencies).
 Dependencias necesarias para desarrollo (devDependencies), como herramientas de compilación, testing, etc.
 Scripts comunes para tareas como ng serve, ng build, o pruebas (scripts).
+
 *package-lock.json*
+
 Propósito: Registro detallado de las dependencias instaladas.
+
 Asegura que se instalen las mismas versiones exactas de las dependencias en cualquier máquina donde se ejecute npm install.
 Generado automáticamente por npm.
 
