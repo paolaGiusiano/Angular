@@ -1,3 +1,15 @@
+***Crear un proyecto***
+
+Primero tenes que tener Nodejs instalado y actualizado (al menos versión 18). https://nodejs.org/en 
+
+Luego hay que instalar la linea de comandos de Angular. Es un paquete que poermite crear el proyecto: `npm install -g @angular/cli`. El -g lo hace un paquete global lo cual lo deja disponible como linea de comandos.
+
+Verifica que instalo correctamente con `ng --version`, verifica que tu versión no es más antigua que la 17.
+
+Para inicializar un proyecto utilizamos `ng new <NombreDelProyecto>`
+
+Luego podemos abrir el proyecto con `ng serve`. SI quieres que se abra el localhost automaticamente podes usar `ng serve --open`.
+
 ***Crear un componente***
 
 `ng generate component <NombreComponente>`
