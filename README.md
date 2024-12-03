@@ -1,3 +1,8 @@
+***Crear un componente***
+
+`ng generate component <NombreComponente>`
+
+
 #tsconfig.json
 
 Propósito: Configuración general para TypeScript en todo el proyecto. Define opciones como el estándar de JavaScript a usar (ES2020), rutas de importación, y configuración base para TypeScript. Este archivo es extendido por otros archivos tsconfig específicos (como tsconfig.app.json y tsconfig.spec.json).
