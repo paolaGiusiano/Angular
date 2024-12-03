@@ -2,6 +2,7 @@
 
 `ng generate component <NombreComponente>`
 
+***Estructura de carpetas***
 
 #tsconfig.json
 
