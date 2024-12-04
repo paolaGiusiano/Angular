@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+h1 {
+    font-family: 'Arial', sans-serif; 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 5px; 
+    letter-spacing: 1px; 
+}
+
+h4 {
+    font-family: sans-serif; 
+    font-size: 10px; 
+    color: #333; 
+    letter-spacing: 1px; 
+    margin-bottom: 25px; 
+}
+
+form {
+    max-width: 600px;
+    margin: 50px auto 0; 
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-column {
+    width: 48%;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Transición suave para el cambio de borde */
+}
+
+input.ng-valid, textarea.ng-valid, select.ng-valid {
+    border-color: #4caf50;
+}
+
+input.ng-invalid, textarea.ng-invalid, select.ng-invalid {
+    border-color: #f44336;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2196f3; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: #1976d2; 
+}

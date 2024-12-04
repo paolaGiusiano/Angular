@@ -1,0 +1,118 @@
+<form [formGroup]="createTicketForm" (ngSubmit)="onSubmit()">
+    <h1>Create Ticket</h1>
+    <h4>This is a form for creating tickets. Fill the form and send us your issues/doubts/suggestions. Our support system will answer it as soon as possible.</h4>
+
+    <div class="form-row">
+        <div class="form-column">
+            <label for="email">Email</label>
+            <input 
+                id="email" 
+                type="email" 
+                formControlName="email" 
+                [ngClass]="{
+                    'is-invalid': createTicketForm.get('email')?.invalid && createTicketForm.get('email')?.touched, 
+                    'is-valid': createTicketForm.get('email')?.valid && createTicketForm.get('email')?.touched
+                }"
+            />
+            <div class="error" *ngIf="createTicketForm.get('email')?.invalid && createTicketForm.get('email')?.touched">
+                Please enter a valid email.
+            </div>
+        </div>
+
+        <div class="form-column">
+            <label for="full_name">Full name</label>
+            <input 
+                id="full_name" 
+                type="text" 
+                formControlName="full_name" 
+                [ngClass]="{
+                    'is-invalid': full_name?.invalid && full_name?.touched, 
+                    'is-valid': full_name?.valid && full_name?.touched
+                }"
+            />
+            <div *ngIf="full_name?.invalid && full_name?.touched" class="error-message">
+                <span *ngIf="full_name?.errors?.['required']">Full name is required</span>
+                <span *ngIf="full_name?.errors?.['minlength']">
+                    Must be at least {{ full_name?.errors?.['minlength']?.requiredLength }} characters long.
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <label for="title">Título</label>
+        <input 
+            id="title" 
+            type="text" 
+            formControlName="title" 
+            [ngClass]="{
+                'is-invalid': title?.invalid && title?.touched, 
+                'is-valid': title?.valid && title?.touched
+            }"
+        />
+        <div *ngIf="title?.invalid && title?.touched" class="error-message">
+            <span *ngIf="title?.errors?.['required']">The title is mandatory.</span>
+            <span *ngIf="title?.errors?.['minlength']">
+                Must be at least {{ title?.errors?.['minlength']?.requiredLength }} characters long.
+            </span>
+        </div>
+    </div>
+
+    <div>
+        <label for="department">Departament</label>
+        <input 
+            id="department" 
+            type="text" 
+            formControlName="department" 
+            [ngClass]="{
+                'is-invalid': department?.invalid && department?.touched, 
+                'is-valid': department?.valid && department?.touched
+            }"
+        />
+        <div *ngIf="department?.invalid && department?.touched" class="error-message">
+            <span *ngIf="department?.errors?.['required']">Title is required.</span>
+            <span *ngIf="department?.errors?.['minlength']">
+                Must be at least {{ department?.errors?.['minlength']?.requiredLength }} characters long.
+            </span>
+        </div>
+    </div>
+
+    <div>
+        <label for="description">Content:</label>
+        <textarea 
+            id="description" 
+            formControlName="description" 
+            [ngClass]="{
+                'is-invalid': description?.invalid && description?.touched, 
+                'is-valid': description?.valid && description?.touched
+            }"
+        ></textarea>
+        <div *ngIf="description?.invalid && description?.touched" class="error-message">
+            <span *ngIf="description?.errors?.['required']">Description is required.</span>
+            <span *ngIf="description?.errors?.['minlength']">
+                Must be at least {{ description?.errors?.['minlength']?.requiredLength }} characters long.
+            </span>
+        </div>
+    </div>
+
+    <div>
+        <label for="priority">Priority:</label>
+        <select 
+            id="priority" 
+            formControlName="priority" 
+            [ngClass]="{
+                'is-invalid': priority?.invalid && priority?.touched, 
+                'is-valid': priority?.valid && priority?.touched
+            }"
+        >
+            <option value="" disabled>Select a priority</option>
+            <option value="normal">Normal</option>
+            <option value="urgent">Urgente</option>
+        </select>
+        <div *ngIf="priority?.invalid && priority?.touched" class="error-message">
+            <span *ngIf="priority?.errors?.['required']">Priority is mandatory.</span>
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="createTicketForm.invalid">Create Ticket</button>
+</form>
